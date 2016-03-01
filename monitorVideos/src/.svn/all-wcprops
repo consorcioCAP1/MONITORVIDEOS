@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/440/proyectos/monitorVideos/trunk/src
+END
+monitor.properties
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/440/proyectos/monitorVideos/trunk/src/monitor.properties
+END
+monitor-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/334/proyectos/monitorVideos/trunk/src/monitor-service.xml
+END
+monitor-log.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/236/proyectos/monitorVideos/trunk/src/monitor-log.xml
+END
+sql-map-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/240/proyectos/monitorVideos/trunk/src/sql-map-config.xml
+END
+monitor-data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/240/proyectos/monitorVideos/trunk/src/monitor-data.xml
+END

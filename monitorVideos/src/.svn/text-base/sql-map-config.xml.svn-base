@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+  <settings useStatementNamespaces="true" />
+  <sqlMap resource="pe/com/certicom/scolas/model/dao/ibatis/configuracion_emisor_llamados_SqlMap.xml"/>
+  <sqlMap resource="pe/com/certicom/scolas/model/dao/ibatis/GRILLA_LLAMADOS_SqlMap.xml"/>
+  <sqlMap resource="pe/com/certicom/scolas/model/dao/ibatis/MARQUESINA_SqlMap.xml"/>
+  <sqlMap resource="pe/com/certicom/scolas/model/dao/ibatis/VIDEO_SqlMap.xml"/>
+</sqlMapConfig>

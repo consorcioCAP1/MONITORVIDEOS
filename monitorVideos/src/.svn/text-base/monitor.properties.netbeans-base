@@ -1,0 +1,17 @@
+#Propiedades de la conexion hacia la base de datos.:
+conexion.host=localhost
+conexion.bd=bdtvmediasunat
+conexion.puerto=1433
+conexion.usuario=sa
+conexion.clave=jdeveloper
+
+#Propiedades del servidor jboss
+jboss.host=localhost
+jboss.puerto=8080
+
+#Realiza la referencia a la tabla configuracion_monitor_llamados 
+monitorVideos.idConfiguracion=0
+monitorVideos.fontsSupported=SansSerif,Serif,monospaced
+monitorVideos.rellamadoMismoCasillero=1
+monitorVideos.sonidoHabilitadoEnVideos=0
+

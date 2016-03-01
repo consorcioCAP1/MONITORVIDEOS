@@ -1,0 +1,84 @@
+#
+# JMF Version 2.1.1e
+#
+
+## Platform: Windows 7, amd64, 6.1
+## Java VM: Oracle Corporation, 1.7.0_25
+
+## DataSource created: com.sun.media.protocol.file.DataSource@6239ae30
+
+## DataSource created: com.sun.media.protocol.file.DataSource@1bcaa83
+
+## DataSource created: com.sun.media.protocol.file.DataSource@40718b01
+
+## DataSource created: com.sun.media.protocol.file.DataSource@5e5d0fb4
+
+$$ Profile: instantiation: 0 ms
+
+## Player created: com.sun.media.content.unknown.Handler@5595c0fb
+##   using DataSource: com.sun.media.protocol.file.DataSource@1bcaa83
+
+$$ Profile: parsing: 46 ms
+
+## Building flow graph for: file:C:/video/01.avi
+
+## Building Track: 0
+## Input: CVID, 320x240, FrameRate=15.0, Length=29700 0 extra bytes
+
+
+## Building Track: 1
+## Input: LINEAR, 44100.0 Hz, 16-bit, Stereo, LittleEndian, Signed, 176400.0 frame rate, FrameSize=32 bits
+
+
+## Here's the completed flow graph:
+  com.sun.media.parser.video.AviParser@3f83be7c
+     connects to: com.sun.media.codec.video.cinepak.JavaDecoder@624edf77
+     format: CVID, 320x240, FrameRate=15.0, Length=29700 0 extra bytes
+  com.sun.media.codec.video.cinepak.JavaDecoder@624edf77
+     connects to: com.sun.media.renderer.video.LightWeightRenderer@50703755
+     format: RGB, 320x240, FrameRate=15.0, Length=76800, 32-bit, Masks=255:65280:16711680, LineStride=320, class [I
+  com.sun.media.parser.video.AviParser@3f83be7c
+     connects to: com.sun.media.renderer.audio.JavaSoundRenderer@476710db
+     format: LINEAR, 44100.0 Hz, 16-bit, Stereo, LittleEndian, Signed, 176400.0 frame rate, FrameSize=32 bits
+
+
+$$ Profile: graph building: 31 ms
+
+$$ Profile: realize, post graph building: 0 ms
+
+!! JavaSound: No rate control
+$$ Profile: prefetch: 234 ms
+
+## Computed latency for video: 270 ms
+
+$$ Profile: instantiation: 0 ms
+
+## Player created: com.sun.media.content.unknown.Handler@59d9c141
+##   using DataSource: com.sun.media.protocol.file.DataSource@6239ae30
+
+$$ Profile: parsing: 68 ms
+
+## Building flow graph for: file:sonidos/LlamadoNormal.wav
+
+## Building Track: 0
+## Input: msadpcm, 22050.0 Hz, 4-bit, Mono, Unsigned, 11155.0 frame rate, FrameSize=4096 bits
+
+
+## Here's the completed flow graph:
+  com.sun.media.parser.audio.WavParser@4cac3c5b
+     connects to: com.sun.media.codec.audio.msadpcm.JavaDecoder@3faea1b0
+     format: msadpcm, 22050.0 Hz, 4-bit, Mono, Unsigned, 11155.0 frame rate, FrameSize=4096 bits
+  com.sun.media.codec.audio.msadpcm.JavaDecoder@3faea1b0
+     connects to: com.sun.media.renderer.audio.JavaSoundRenderer@4e64fc7d
+     format: LINEAR, 22050.0 Hz, 16-bit, Mono, LittleEndian, Signed
+
+
+$$ Profile: graph building: 18 ms
+
+$$ Profile: realize, post graph building: 7 ms
+
+!! JavaSound: No rate control
+$$ Profile: prefetch: 16 ms
+
+## Computed latency for video: 250 ms
+

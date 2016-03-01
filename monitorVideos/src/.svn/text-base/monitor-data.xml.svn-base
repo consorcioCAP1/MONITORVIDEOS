@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" 
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:monitor.properties"> </property>
+    </bean>
+
+    <!--  La conexion hacia la base de datos -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver"/>
+        <property name="url" value="jdbc:jtds:sqlserver://${conexion.host}:${conexion.puerto}/${conexion.bd};instance=SQLEXPRESS;socketTimeout=60;loginTimeout=60"/>
+        <property name="username" value="${conexion.usuario}"/>
+        <property name="password" value="${conexion.clave}"/>
+    </bean>
+    
+    <!-- Definicion del mapeo sql para la capa de base de datos con iBatis -->
+    <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="sql-map-config.xml"/>
+    </bean>
+    
+    <!-- Inyeccion de DAOS a la aplicacion -->
+    <bean id="marquesinaDAO" class="pe.com.certicom.scolas.model.dao.MarquesinaDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient"/>
+    </bean>
+
+    <bean id="videoDAO" class="pe.com.certicom.scolas.model.dao.VideoDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient"/>
+    </bean>
+
+    <bean id="grillaLlamadosDAO" class="pe.com.certicom.scolas.model.dao.GrillaLlamadosDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient"/>
+    </bean>
+
+    <bean id="configuracionMonitorDAO" class="pe.com.certicom.scolas.model.dao.ConfiguracionMonitorDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient"/>
+    </bean>
+
+
+</beans>
+
+
+

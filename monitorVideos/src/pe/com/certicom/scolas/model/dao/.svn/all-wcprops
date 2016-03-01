@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/369/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao
+END
+ConfiguracionMonitorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/249/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/ConfiguracionMonitorDAO.java
+END
+ConfiguracionMonitorDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/249/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/ConfiguracionMonitorDAOImpl.java
+END
+MarquesinaDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/247/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/MarquesinaDAO.java
+END
+VideoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/247/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/VideoDAO.java
+END
+MarquesinaDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/247/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/MarquesinaDAOImpl.java
+END
+GrillaLlamadosDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/247/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/GrillaLlamadosDAO.java
+END
+VideoDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/247/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/VideoDAOImpl.java
+END
+GrillaLlamadosDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/247/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/GrillaLlamadosDAOImpl.java
+END

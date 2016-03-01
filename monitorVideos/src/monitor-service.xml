@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:aop="http://www.springframework.org/schema/aop" 
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <import resource="monitor-log.xml"/>
+    <import resource="monitor-data.xml"/>
+
+    <bean id="monitorService" class="pe.com.certicom.scolas.monitor.service.MonitorServiceImpl">
+        <property name="marquesinaDAO" ref="marquesinaDAO"/>
+        <property name="videoDAO" ref="videoDAO"/>
+        <property name="grillaLlamadosDAO" ref="grillaLlamadosDAO"/>
+        <property name="configuracionMonitorDAO" ref="configuracionMonitorDAO"/>
+        <property name="ipServidor" value="${jboss.host}"/>
+        <property name="puertoServidor" value="${jboss.puerto}"/>
+        <property name="fontsSupported" value="${monitorVideos.fontsSupported}"/>
+        <property name="idConfiguracion" value="${monitorVideos.idConfiguracion}"/>
+        <property name="rellamadoMismoCasillero" value="${monitorVideos.rellamadoMismoCasillero}"/>
+        <property name="sonidoHabilitadoEnVideos" value="${monitorVideos.sonidoHabilitadoEnVideos}"/>
+    </bean>
+
+    <!-- Creamos el listener jms que recibirá los eventos ocurridos en el servidor-->
+    <!--
+    <bean id="listenerJMS" class="pe.com.certicom.scolas.jms.ListenerJMSService">
+        <property name="jbossHost" value="${jboss.host}"/>
+    </bean>
+    -->
+
+</beans>
+
+
+

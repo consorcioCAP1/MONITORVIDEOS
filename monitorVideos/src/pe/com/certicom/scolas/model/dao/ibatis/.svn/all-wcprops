@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/369/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/ibatis
+END
+MARQUESINA_SqlMap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/369/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/ibatis/MARQUESINA_SqlMap.xml
+END
+GRILLA_LLAMADOS_SqlMap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/247/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/ibatis/GRILLA_LLAMADOS_SqlMap.xml
+END
+VIDEO_SqlMap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/369/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/ibatis/VIDEO_SqlMap.xml
+END
+configuracion_emisor_llamados_SqlMap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/255/proyectos/monitorVideos/trunk/src/pe/com/certicom/scolas/model/dao/ibatis/configuracion_emisor_llamados_SqlMap.xml
+END
