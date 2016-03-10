@@ -23,6 +23,8 @@
         <property name="idConfiguracion" value="${monitorVideos.idConfiguracion}"/>
         <property name="rellamadoMismoCasillero" value="${monitorVideos.rellamadoMismoCasillero}"/>
         <property name="sonidoHabilitadoEnVideos" value="${monitorVideos.sonidoHabilitadoEnVideos}"/>
+        <property name="rutaSonidos" value="${monitorVideos.rutaSonidos}"/>
+        <property name="rellamadoPronunciado" value="${monitorVideos.rellamadoPronunciado}"/>
     </bean>
 
     <!-- Creamos el listener jms que recibirá los eventos ocurridos en el servidor-->

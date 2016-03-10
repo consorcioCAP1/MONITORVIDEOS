@@ -52,6 +52,8 @@ public class RoundedPanel extends JPanel {
 
     private String codigoImpresionReal;
 
+    private int cantidadRellamadosTicket = 0;
+
     public RoundedPanel() {
         super();
         //setLayout(new java.awt.GridLayout(1,3));
@@ -109,6 +111,12 @@ public class RoundedPanel extends JPanel {
     }
 
     public void setMensaje(String codigoImpresion,String ventanilla, boolean llamadoPorPrecola){
+
+        if(codigoImpresion.equals(this.getCodigoImpresionReal())){
+            cantidadRellamadosTicket++;
+        }else{
+            cantidadRellamadosTicket=0;
+        }
 
         setCodigoImpresionReal(codigoImpresion);
         
@@ -243,4 +251,19 @@ public class RoundedPanel extends JPanel {
     public void setCodigoImpresionReal(String codigoImpresionReal) {
         this.codigoImpresionReal = codigoImpresionReal;
     }
+
+    /**
+     * @return the cantidadRellamadosTicket
+     */
+    public int getCantidadRellamadosTicket() {
+        return cantidadRellamadosTicket;
+    }
+
+    /**
+     * @param cantidadRellamadosTicket the cantidadRellamadosTicket to set
+     */
+    public void setCantidadRellamadosTicket(int cantidadRellamadosTicket) {
+        this.cantidadRellamadosTicket = cantidadRellamadosTicket;
+    }
+
 }

@@ -42,6 +42,9 @@ public class MonitorServiceImpl implements MonitorService, InitializingBean {
     private String fontsSupported;
     private String sonidoHabilitadoEnVideos;
 
+    private String rutaSonidos;
+    private String rellamadoPronunciado;
+
 
     public List<Marquesina> listarMarquesinas() {
         return marquesinaDAO.listarMarquesinas(new Integer(getIdConfiguracion()));
@@ -257,6 +260,34 @@ public class MonitorServiceImpl implements MonitorService, InitializingBean {
      */
     public void setSonidoHabilitadoEnVideos(String sonidoHabilitadoEnVideos) {
         this.sonidoHabilitadoEnVideos = sonidoHabilitadoEnVideos;
+    }
+
+    /**
+     * @return the rutaSonidos
+     */
+    public String getRutaSonidos() {
+        return rutaSonidos;
+    }
+
+    /**
+     * @param rutaSonidos the rutaSonidos to set
+     */
+    public void setRutaSonidos(String rutaSonidos) {
+        this.rutaSonidos = rutaSonidos;
+    }
+
+    /**
+     * @return the rellamadoPronunciado
+     */
+    public String getRellamadoPronunciado() {
+        return rellamadoPronunciado;
+    }
+
+    /**
+     * @param rellamadoPronunciado the rellamadoPronunciado to set
+     */
+    public void setRellamadoPronunciado(String rellamadoPronunciado) {
+        this.rellamadoPronunciado = rellamadoPronunciado;
     }
 
 }

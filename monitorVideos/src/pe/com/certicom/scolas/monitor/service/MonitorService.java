@@ -28,5 +28,8 @@ public interface MonitorService {
     public void desconectarMonitor();
     public boolean publicarMensajeEnTopic(String mensaje);
     public String getSonidoHabilitadoEnVideos();
+    public String getRellamadoPronunciado();
+    public String getRutaSonidos();
+
     
 }

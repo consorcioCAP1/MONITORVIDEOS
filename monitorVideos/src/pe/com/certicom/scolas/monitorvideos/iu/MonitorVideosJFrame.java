@@ -60,6 +60,9 @@ public class MonitorVideosJFrame extends javax.swing.JFrame {
     private Timer temporizador = null;
     private boolean rellamadoMismoCasillero = false;
 
+    private int countRecallPron = 0;
+    private String rutaSonidos = null;
+
     /**
      Llamado cada vez que llega un mensaje del servidor...
      */
@@ -78,7 +81,14 @@ public class MonitorVideosJFrame extends javax.swing.JFrame {
         //Aqui está la flecha :D
         caja.setMensaje(codigoImpresion, nombreTV, llamadoPorPrecola);
         resaltarCaja(caja,llamadoPorPrecola);
-        soundPlayer.reiniciar();
+        
+        if(countRecallPron>0 && caja.getCantidadRellamadosTicket()==countRecallPron){
+            System.out.println("Pronunciando ticket...");
+            SoundPlayer.pronunciarTicket(rutaSonidos,codigoImpresion);
+        }else{
+            System.out.println("Ticket normal...");
+            SoundPlayer.llamar(configuracionGrilla.getDesRutaSonidoLlamado());
+        }
     }
 
     //Como podemos hacer que este método se ejecute en forma secuencial...
@@ -171,6 +181,9 @@ public class MonitorVideosJFrame extends javax.swing.JFrame {
             this.app = app;
             MonitorService monitorService = (MonitorService) app.getBean("monitorService");
             if("1".equals(monitorService.getRellamadoMismoCasillero()))rellamadoMismoCasillero = true;
+
+            countRecallPron = new Integer(monitorService.getRellamadoPronunciado());
+            rutaSonidos = monitorService.getRutaSonidos();
 
             marquesinas = monitorService.listarMarquesinas();
             videos = monitorService.listarVideos();
