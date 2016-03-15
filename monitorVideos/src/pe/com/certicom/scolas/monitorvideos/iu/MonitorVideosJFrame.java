@@ -84,7 +84,7 @@ public class MonitorVideosJFrame extends javax.swing.JFrame {
         
         if(countRecallPron>0 && caja.getCantidadRellamadosTicket()==countRecallPron){
             System.out.println("Pronunciando ticket...");
-            SoundPlayer.pronunciarTicket(rutaSonidos,codigoImpresion);
+            SoundPlayer.pronunciarTicket(rutaSonidos,codigoImpresion,nombreTV); 
         }else{
             System.out.println("Ticket normal...");
             SoundPlayer.llamar(configuracionGrilla.getDesRutaSonidoLlamado());

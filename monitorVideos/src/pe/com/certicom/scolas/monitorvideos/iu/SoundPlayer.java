@@ -136,7 +136,7 @@ public class SoundPlayer implements ControllerListener{
     }
 
 
-    public static void pronunciarTicket(String rutaSonidos, String codigoTicket){
+    public static void pronunciarTicket(String rutaSonidos, String codigoTicket, String ventanilla){
         try{
 
             char[] alfanumerico = codigoTicket.toCharArray();
@@ -145,8 +145,14 @@ public class SoundPlayer implements ControllerListener{
                 SoundPlayer s = new SoundPlayer(file);
                 s.play2();
                 Thread.sleep(700);
-                //s.stop();
             }
+
+            //Ahora llamo a la ventanilla..
+            String file2 = rutaSonidos+"V"+ventanilla+".wav";
+            SoundPlayer s2 = new SoundPlayer(file2);
+            s2.play2();
+            Thread.sleep(1200);
+
         }catch(Exception e){
             e.printStackTrace();
             System.out.println(e);
